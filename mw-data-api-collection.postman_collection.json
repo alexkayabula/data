@@ -1,0 +1,1228 @@
+{
+	"info": {
+		"_postman_id": "0a0a8e1c-edaa-495a-ac2d-9dc477269759",
+		"name": "mw-data-api-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Retrieve details of users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users?organisation_id=sed officia",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "organisation_id",
+									"value": "sed officia",
+									"description": "(Required) ID of the organization"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail about an organizations users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?organisation_id=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "organisation_id",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "sed officia",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": [\n  {\n   \"id\": \"dolo\",\n   \"name\": \"qui\",\n   \"email\": \"in\",\n   \"device_id\": \"Duis Ut id quis ut\",\n   \"session_id\": \"laboris\",\n   \"organization_id\": \"ut cillum qui\",\n   \"amplitude_id\": \"reprehender\"\n  },\n  {\n   \"id\": \"sed pariatur\",\n   \"name\": \"sint laborum velit\",\n   \"email\": \"elit officia\",\n   \"device_id\": \"velit enim ea\",\n   \"session_id\": \"in ea\",\n   \"organization_id\": \"irure enim deserunt\",\n   \"amplitude_id\": \"Ut veniam\"\n  }\n ],\n \"object\": \"array\",\n \"nnext_cursor\": \"qui elit nisi\"\n}"
+						},
+						{
+							"name": "Users do not exist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?organisation_id=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "organisation_id",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "Users object is malformed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?organisation_id=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "organisation_id",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?organisation_id=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "organisation_id",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Details of a user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "sed officia",
+									"description": "(Required) ID of the user"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail about a user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "sed officia",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": \"veniam qui\",\n \"name\": \"ad irure non ut\",\n \"email\": \"velit culpa\",\n \"device_id\": \"consequat Excepteur dolor\",\n \"session_id\": \"nulla mollit\",\n \"organization_id\": \"consequat nisi dolore\",\n \"amplitude_id\": \"eiusmod Duis incididunt veniam dolore\"\n}"
+						},
+						{
+							"name": "User does not exist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "User object is malformed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "organizations",
+			"item": [
+				{
+					"name": "Retrieve details of organizations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations?name=sed officia&type=sed officia",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "sed officia",
+									"description": "(Required) Name of the organization"
+								},
+								{
+									"key": "type",
+									"value": "sed officia",
+									"description": "(Required) Type of the organization"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail about organizations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations?name=sed officia&type=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "sed officia",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": [\n  {\n   \"id\": \"aute sit esse\",\n   \"name\": \"est qui magna ad\",\n   \"type\": \"Ut minim ullamco\"\n  },\n  {\n   \"id\": \"non dolor nisi eiusmod\",\n   \"name\": \"Ut adip\",\n   \"type\": \"est aliquip mollit Ut magna\"\n  }\n ],\n \"object\": \"array\",\n \"nnext_cursor\": \"Lorem dolor fugiat\"\n}"
+						},
+						{
+							"name": "Organizations do not exist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations?name=sed officia&type=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "Organizations object is malformed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations?name=sed officia&type=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations?name=sed officia&type=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Details of an organization",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/organizations/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"organizations",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "sed officia",
+									"description": "(Required) ID of the organization"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail about an organization",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "sed officia",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": \"eiusmod nostrud\",\n \"name\": \"ex ullamco anim cillum\",\n \"type\": \"amet et aute Duis\"\n}"
+						},
+						{
+							"name": "Organization does not exist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "Organization object is malformed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/organizations/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"organizations",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "Retrieve details of events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/events?user_id=sed officia&type=sed officia&country=sed officia",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "sed officia",
+									"description": "User id of the event trigger"
+								},
+								{
+									"key": "type",
+									"value": "sed officia",
+									"description": "Type of the event"
+								},
+								{
+									"key": "country",
+									"value": "sed officia",
+									"description": "Origin of the event"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List of events",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events?user_id=sed officia&type=sed officia&country=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										},
+										{
+											"key": "country",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "sed officia",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": [\n  {\n   \"insert_id\": \"consequat anim occaecat ut sed\",\n   \"user_id\": \"occaecat amet tempor Ut\",\n   \"event_id\": \"nulla occaecat ullamco incididunt\",\n   \"event_properties\": \"consequat qui anim\",\n   \"uuid\": \"dolor\",\n   \"ip_address\": \"laborum ut dolore\",\n   \"user_creation_time\": \"amet dolore irure\",\n   \"event_time\": \"in sit\",\n   \"client_event_time\": \"Ut Lorem aliqua\",\n   \"client_upload_time\": \"ex Excep\",\n   \"server_recieve_time\": \"aliqua\",\n   \"server_upload_time\": \"adipisicing dolore Lorem cupidatat\",\n   \"processed_time\": \"ut sit tempor\",\n   \"country\": \"tempor Duis nisi incididunt in\",\n   \"city\": \"ut Lorem cillum anim\",\n   \"region\": \"minim\",\n   \"langauge\": \"veniam eu\",\n   \"os_name\": \"in cillum in\",\n   \"os_version\": \"sit esse ut\",\n   \"data\": \"adipisicing cillum incididunt Excepteur\",\n   \"device_model\": \"magna id\"\n  },\n  {\n   \"insert_id\": \"am\",\n   \"user_id\": \"in sit non qui\",\n   \"event_id\": \"nostrud occaecat cupidatat sunt\",\n   \"event_properties\": \"est in dolore ut\",\n   \"uuid\": \"occaecat sunt est aliq\",\n   \"ip_address\": \"sint est dolore\",\n   \"user_creation_time\": \"non esse\",\n   \"event_time\": \"veniam velit in\",\n   \"client_event_time\": \"officia ipsum enim\",\n   \"client_upload_time\": \"adipisi\",\n   \"server_recieve_time\": \"amet enim sint in\",\n   \"server_upload_time\": \"nisi id reprehenderit\",\n   \"processed_time\": \"do adipisicing sunt ad\",\n   \"country\": \"ipsum anim elit\",\n   \"city\": \"ut aliquip occaecat\",\n   \"region\": \"ut\",\n   \"langauge\": \"in culpa proident dolor exercitation\",\n   \"os_name\": \"amet fugia\",\n   \"os_version\": \"ea consectetur\",\n   \"data\": \"sed deserunt irure\",\n   \"device_model\": \"enim consectetur sed do\"\n  }\n ],\n \"object\": \"array\",\n \"nnext_cursor\": \"labore\"\n}"
+						},
+						{
+							"name": "Events do not exist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events?user_id=sed officia&type=sed officia&country=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										},
+										{
+											"key": "country",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "Events object is malformed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events?user_id=sed officia&type=sed officia&country=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										},
+										{
+											"key": "country",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events?user_id=sed officia&type=sed officia&country=sed officia",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "sed officia"
+										},
+										{
+											"key": "type",
+											"value": "sed officia"
+										},
+										{
+											"key": "country",
+											"value": "sed officia"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Details of an event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/events/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"events",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "sed officia",
+									"description": "(Required) ID of the event"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail about an event",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "sed officia",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"insert_id\": \"id laborum\",\n \"user_id\": \"eu dolore nostrud nisi\",\n \"event_id\": \"velit consectetur\",\n \"event_properties\": \"et consectetur\",\n \"uuid\": \"laborum cupidatat est minim\",\n \"ip_address\": \"consectetur cupidatat eiusmod\",\n \"user_creation_time\": \"ea\",\n \"event_time\": \"mollit consectetur cupidatat\",\n \"client_event_time\": \"do ullamco\",\n \"client_upload_time\": \"mollit in exercitation\",\n \"server_recieve_time\": \"velit in enim\",\n \"server_upload_time\": \"voluptate commodo deserunt\",\n \"processed_time\": \"Ut Lorem dolor labore ut\",\n \"country\": \"culp\",\n \"city\": \"irure Ut adipisicing sint\",\n \"region\": \"aliqua nisi\",\n \"langauge\": \"ullamco adipisicing\",\n \"os_name\": \"dolor do nostrud\",\n \"os_version\": \"irure dolore\",\n \"data\": \"cillum\",\n \"device_model\": \"adipisicing dolor velit\"\n}"
+						},
+						{
+							"name": "Event does not exist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "Event object is malformed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/events/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"events",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -66642604,\n \"message\": \"aliqua consequat\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
